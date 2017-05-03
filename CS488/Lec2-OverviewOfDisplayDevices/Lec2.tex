@@ -1,0 +1,67 @@
+\documentclass[12pt]{article}
+
+\setlength\parindent{0pt}
+\newcommand{\myt}[1]{\textbf{\underline{#1}}}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{\vspace{-15ex}CS488 Graphics Lecture 2 - Overview of Display Devices\vspace{-1ex}}
+\date{May 3rd, 2017}
+\author{Graham Cooper}
+
+\begin{document}
+	\maketitle
+	
+	\section*{CRT (Cathode Ray Tube) based on Television technology}
+	
+	\begin{itemize}
+		\item beam of electrons(cathode rays) omitted by an electron gun passes through focusing and deflecting systems that direct the beam toward specific positions on a phosphor-coated screen.
+		\item \underline{Color CRT Monitors} use a combination of phospors that emit different colors
+		\begin{itemize}
+			\item \underline{Shadow Color Method}: Three phosphor color dots at each pixel location (RGB)
+			\item Three electron guns; one for each color dot
+			\item Triangle alignment
+		\end{itemize}
+	\end{itemize}
+
+	\section*{Terminology}
+	\begin{itemize}
+		\item \underline{Persistence:} How long the point on the screen continues to emit light after the CRT beam is removed
+		\begin{itemize}
+			\item Question: for displaying highly complex static pictures/images, should we use a high or a low persistence phosphor. 
+			\item Answer: If static/highly complex then we have high persitence, images that are moving/changing we want low persistence.
+		\end{itemize}
+		\item \underline{Resolution}: maximum number of points (pixel = picture elements) that can be displayed without overlap. If we have two pixels that are very close together and the distance D of the amplitutde wave is larger than the distance between the two pixels, the pixels appear to be the same color. this distance D is usually the distance from the center (highest amplitude) to the point at 60\% of the amplitude
+		\item \underline{Frame Buffer}: Stores the picture(image) definition. It holds the set of intensity values for all screen points (pixels)
+		\begin{itemize}
+			\item Stored intensity values are retrieved from the frame buffer and painted one row (\underline{scan line}) at a time.
+		\end{itemize}
+	\end{itemize}
+
+	\section*{Flat Panels}
+	\begin{itemize}
+		\item Plasma Panel (Gas discharge). Filling the region between two glass plates with a mixture of gasses that usually includes neon ("Glowing Plasma")
+		\item Speration between pixels provided by the electrical field of the conductors.
+	\end{itemize}
+
+	\section*{Liquid Crystal Display (LCD)}
+	\begin{itemize}
+		\item Produces a picture passsing polarized light from the surroundings or from an internal light source through a liquid-crystal material that can be aligned to eitherblock or emit light.
+	\end{itemize}
+
+	\section*{Organic Light Emitting Diode (OLED)}
+	\begin{itemize}
+		\item LCD's are non-emissive (They are illuminated with a back light)
+		\item OLED are emissive (They produce their own light)
+		\item OLED: Excellent response time, fair lifetime
+		\item LCD: Excellent lifetime, fair response time
+	\end{itemize}
+
+	Continued in Course notes Page 14 (Graphics Pipelining)\\
+	
+	Three main areas in graphics: Modeling, rendering, animation\\
+	Finished Chapter 2 in the course notes\\
+	
+\end{document}
