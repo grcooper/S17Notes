@@ -1,0 +1,70 @@
+\documentclass[12pt]{article}
+
+\setlength\parindent{0pt}
+\newcommand{\myt}[1]{\textbf{\underline{#1}}}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{\vspace{-15ex}cs488 Lecture 3 - Geometries\vspace{-1ex}}
+\date{May 8th, 2017}
+\author{Graham Cooper}
+
+\begin{document}
+	\maketitle
+	
+	\section*{Vector Spaces}
+	\underline{Plane}: Span of two vectors pointing in different directions\\
+	\section*{Affine space}
+	\section*{Euclidian Space}
+	You can use the angle (less than or greater than 90 degrees) to decide if the viewer can see the face on an object or not, and then hide that object\\
+	
+	\section*{Cartesian Space}
+	Rambled about decartes - I think therefore I am\\
+	
+	\underline{What is the fundamental difference between a point and a vector?}\\
+	\begin{itemize}
+		\item A point is a position specified with coordinate values in the same reference frame, so that the  distance from the origin depends on the choice of reference frame.
+		\item A vector is defined as the difference between two point positions. Given two point positions, we can obtain vector components in the same way for any reference frame. When finding a vector using the difference between two points, those points must be in the same reference frame
+	\end{itemize}
+
+	\subsection*{Reference Frames}
+
+	$$v = P-Q = \begin{bmatrix} x_2 \\ y_2 \\ \eta_2 \\ 1 \end{bmatrix} - \begin{bmatrix} x_1 \\ y_1 \\ \eta_1 \\ 1 \end{bmatrix} = \begin{bmatrix} x_2 - x_1 \\ y_2 - y_1 \\ \eta_2 - \eta_1 \\ 0 \end{bmatrix}$$
+	
+	$$\begin{bmatrix} \overrightarrow{i} \overrightarrow{j} \overrightarrow{k} \Theta \end{bmatrix} \begin{bmatrix} x \\ y \\ \eta \\ 1 \end{bmatrix} = x\overrightarrow{i} + y\overrightarrow{j} + \eta\overrightarrow{k} + \Theta$$
+	
+	\subsection*{Cross Product}
+	$$\overrightarrow{v_1} \times \overrightarrow{v_2} = \overrightarrow{u}\|\overrightarrow{v_1}\|\|\overrightarrow{v_2}\|sin{\theta}$$
+	$$0 \le \theta \le \pi$$
+	u is a unit vector perpindicular to both $\overrightarrow{v_1}$ and $\overrightarrow{v_2}$
+	
+	$$v_1 \times v_2 = (v_{1y}v_{2\eta} - v_{1\eta}v_{2y}, v_{1\eta}v_{2x} - v_{1x}v_{2\eta}, v_{1x}v_{2y} - v_{1y}v_{2x})$$
+	
+	\subsection*{Dot Product}
+	$$v_1 \dot v_2 = v_{1x}v_{2x} + v_{1y}v_{2y} + v_{1\eta}v_{2\eta}$$
+	We will use this as a Parametric Represetnation of a line segment\\
+	
+	
+	\subsection*{Affine Combinations}
+	Drawing here that I missed, similar to the Q/A image on page32 of the course notes\\
+	
+	If we have a drawing of 3 points, A, B and C, where there are directional vectors going from A to B and C\\
+	$$(1-t)(1-s)A + B + sC = P(s,t)$$\\
+	We get a parametric equation as above\\
+	
+	\section*{Scaling}
+	$S_x = S_y \rightarrow$ Uniform Scaling\\
+	$S_x \ne S_y \rightarrow$ Non-Uniform Scaling\\
+	
+	\section*{Rotation}
+	$x' = rcos(\rho + \theta)$\\
+	$y' = rsin(\rho + \theta)$\\
+	$x' = rcos\rho cos\theta - rsin\rho sin\theta$\\
+	$y' = rcos\rho sin\theta + rsin\rho cos\theta$\\
+	$x = rcos\theta$\\
+	$y = rsin\rho$\\
+	$x' = xcos\theta - ysin\theta$\\
+	$y' = xsin\theta - ycos\theta$\\
+\end{document}
