@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+
+\setlength\parindent{0pt}
+\newcommand{\myt}[1]{\textbf{\underline{#1}}}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\usepackage{tikz}
+\usetikzlibrary{trees}
+\usepackage{cancel}
+
+\title{\vspace{-15ex}CS486 Lecture 3 - To the A*'s and beyond\vspace{-1ex}}
+\date{May 10th, 2017}
+\author{Graham Cooper}
+
+\begin{document}
+	\maketitle
+	
+	
+	\section*{A*}
+	\subsection*{Optimality}
+	Slide 23 of Lecture 3 is an imporant proof on the optimality of A*, remember it only applies for trees\\
+	
+	\subsection*{A* Revisiting States}
+	See lecture 3 Slide 24\\
+	
+	The numbers come from the value of F() + H() of that node, crossouts mean we popped that off of hte queue\\
+	\begin{tabular}{c  c  c | c }
+		S & & \cancel{B(4)} & A(8) \\
+		B & & \cancel{C(5)} & A(8) \\
+		A & & \cancel{A(8)} & G(10) \\
+		C & & \cancel{C(4)} & G(10) \\
+		  & & \cancel{G(9)} & G(10) \\
+	\end{tabular}
+
+	We have now found the shorter path to G
+
+	\begin{tikzpicture}[level distance=1.5cm,
+	level 1/.style={sibling distance=3cm},
+	level 2/.style={sibling distance=1.5cm}]
+	\node {S}
+	child {node {A}
+		child {node {C}
+			child{ node {G}}	
+		  }}
+	child {node {B}
+		child {node {C}
+			child {node {G}}
+		}
+	};
+	\end{tikzpicture}
+	
+	
+	
+	
+	
+	
+\end{document}
