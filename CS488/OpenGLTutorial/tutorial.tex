@@ -1,0 +1,27 @@
+\documentclass[12pt]{article}
+
+\setlength\parindent{0pt}
+\newcommand{\myt}[1]{\textbf{\underline{#1}}}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{\vspace{-15ex}CS488 Tutorial\vspace{-1ex}}
+\date{May 11th, 2017}
+\author{Graham Cooper}
+
+\begin{document}
+	\maketitle
+	
+	\section*{Shaders}
+	\begin{itemize}
+		\item Vertex shader shades the vertexes and also does the position of the vertexes, passes the out colro to the fragment shader. Colors on the vertex sharder are gradients between the points in the triangles
+		\item fragment shader colors each pixel and applies the operations inside of the main functions
+		\item There is a depth buffer which stores the depth of each object on the screen. IF the depth is less, then that nuber is kept in the buffer, only objects (pixels) stored in the buffer are drawn to the screen
+		\item Uniform materials/colors color the entire thing??? May have to double check that
+		\item the vertexes are in counter clockwise ordering, this is important for where the normal is
+	\end{itemize}
+	
+	
+\end{document}
