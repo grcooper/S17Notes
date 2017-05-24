@@ -1,0 +1,57 @@
+\documentclass[12pt]{article}
+
+\setlength\parindent{0pt}
+\newcommand{\myt}[1]{\textbf{\underline{#1}}}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{\vspace{-15ex}Lecture 8 - More Probability\vspace{-1ex}}
+\date{May 24th, 2017}
+\author{Graham Cooper}
+
+\begin{document}
+	\maketitle
+	
+	When looking at a Bayes net, see slide 24, lecture 7\\
+	The numbers here are just examples\\
+	
+	\begin{tabular}{c | c}
+		P(a) & P(!a) \\ \hline
+		0.6 & 0.4
+	\end{tabular}\\
+
+	\begin{tabular}{c | c | c}
+		A & C & P(C|A) \\ \hline
+		a & c & 0.9 \\
+		a & !c & 0.1 \\
+		!a & c & 0.3 \\
+		!a & !c & 0.7 \\
+	\end{tabular}\\
+	
+	\begin{tabular}{c c c | c}
+		A & B & D & P(D|A,B) \\ \hline
+		a & b & d & \\
+		a & b & !d & \\
+		a & !b & d & \\
+		a & !b & !d & \\
+		!a & b & d & \\
+		!a & b & !d & \\
+		!a & !b & d & \\
+		!a & !b & !d & \\	
+	\end{tabular}\\
+
+	Can we have arrows going both ways? No we want an acyclic directed graph.\\ Bayesion networks do not have cycles
+	
+	D-Seperations - Slide 34 lecture 7\\
+	1. Independent (first rule) - I missed part of the answer to this :S\\
+	2. Dependent if we do not observer flue, Independent if we do (second rule)\\
+	3. Dependent if we do not observe fever or flu, independedent if we do\\
+	4. Independent if we do not observer fever (rule 3), dependent if we do observe fever (the path opens up)\\
+	5. Independed if we do not observe fever (Rule 3), depended if we do observe fever (the path opens up)\\
+
+	Finished on slide 8? Lecture 8
+
+	
+\end{document}
