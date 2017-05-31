@@ -1,0 +1,50 @@
+\documentclass[12pt]{article}
+
+\setlength\parindent{0pt}
+\newcommand{\myt}[1]{\textbf{\underline{#1}}}
+
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\title{\vspace{-15ex}Lec 9 AI - Numpy things \vspace{-1ex}}
+\date{May 29th, 2017}
+\author{Graham Cooper}
+
+\begin{document}
+	\maketitle
+	From lecture 8 - slide 12\\
+	
+	f = np.array([[0.6, 0.4], [0.1, 0.9]);\\
+	g = np.array([[0.2, 0.8],[0.3,0.7]]);
+	
+	\begin{tabular}{c | c c}
+		a/b & 0 & 1 \\ \hline
+		0 & 0.6 & 0.4 \\
+		1 & 0.1, 0.9
+	\end{tabular}\\
+
+	\begin{tabular}{c | c c}
+		b/c & 0 & 1 \\ \hline
+		0 & 0.2 & 0.8 \\
+		1 & 0.3 & 0.7
+	\end{tabular}\\
+
+	f.reshape(2(A),2(B),1(C))\\
+	g.reshape(1(A), 2(B), 2(C))\\
+	h = f *g\\
+	
+	If we want to see the size of the resulting array, then we call this, gives us the size of each dimension\\
+	h.shape()\\
+	$[2,2,2]$\\
+	
+	
+	We can restrict an array in python
+	f[1,:] - We restrict to dimension 1, and all of the values are considered. The next three lines are equivalent\\
+	slc = [slice(none)] * 2\\
+	slc[0] = 1\\
+	f[slc]\\
+	
+	
+	
+\end{document}
